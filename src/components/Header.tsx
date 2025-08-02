@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const { theme, setTheme, themeConfig } = useTheme();
 
   const themes = [
-    { value: 'theme1' as Theme, label: 'Minimalist', description: 'Clean & Simple' },
+    { value: 'theme1' as Theme, label: 'Minimalist', description:'Clean & Simple' },
     { value: 'theme2' as Theme, label: 'Dark Elegant', description: 'Professional Dark' },
     { value: 'theme3' as Theme, label: 'Colorful Creative', description: 'Vibrant & Playful' },
   ];

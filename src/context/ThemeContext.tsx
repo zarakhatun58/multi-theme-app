@@ -32,6 +32,7 @@ const themeConfigs = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+// 🔁 Custom hook to access the theme context
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -43,6 +44,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>('theme1');
 
+  // ✅ 1. On component mount, read the theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme && Object.keys(themeConfigs).includes(savedTheme)) {
@@ -50,16 +52,18 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, []);
 
+  // ✅ 2. When theme changes, write it to localStorage
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme); // optional CSS theme hook
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  // function to change theme
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
   };
 
-  const value = {
+  const value: ThemeContextType = {
     theme,
     setTheme,
     themeConfig: themeConfigs[theme],

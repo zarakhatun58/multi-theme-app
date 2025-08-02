@@ -22,8 +22,8 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'jkhatun258@gmail.com', href: 'mailto:jkhatun258@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Address', value: '123 Design Street, UI City, UX 12345', href: '#' },
+    { icon: Phone, label: 'Phone', value: '+918617737598', href: 'tel:+918617737598' },
+    { icon: MapPin, label: 'Address', value: 'Gorachand lane Parkcircus, kolkata City, West Bengal 712406', href: '#' },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
