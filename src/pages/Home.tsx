@@ -42,7 +42,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="space-y-12 animate-theme-switch">
-      {/* Hero Section */}
       <section className="text-center space-y-6">
         <div className="space-y-4">
           <Badge variant="secondary" className="px-4 py-1">
@@ -68,7 +67,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="grid md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <Card key={index} className="text-center hover:scale-105 transition-all duration-300 theme-shadow">
@@ -85,7 +83,6 @@ const Home: React.FC = () => {
         ))}
       </section>
 
-      {/* Products Section */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold text-foreground">Featured Products</h2>
@@ -104,8 +101,6 @@ const Home: React.FC = () => {
           ))}
         </div>
       </section>
-
-      {/* Call to Action */}
       <section className="text-center py-12 theme-gradient rounded-2xl text-white">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold">Ready to Transform Your Experience?</h2>

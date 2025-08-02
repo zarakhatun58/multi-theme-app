@@ -28,7 +28,6 @@ const Contact: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    // Sanitize input for security
     const sanitizedValue = sanitizeInput(value);
     setFormData(prev => ({ ...prev, [name]: sanitizedValue }));
   };
@@ -36,7 +35,6 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate email
     if (!validateEmail(formData.email)) {
       toast({
         title: "Invalid Email",
@@ -46,7 +44,6 @@ const Contact: React.FC = () => {
       return;
     }
 
-    // Validate form data
     if (formData.name.length < 2 || formData.message.length < 10) {
       toast({
         title: "Validation Error",
@@ -56,13 +53,11 @@ const Contact: React.FC = () => {
       return;
     }
     
-    // Simulate form submission
     toast({
       title: "Message Sent Successfully!",
       description: "Thank you for your message. We'll get back to you soon.",
     });
 
-    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 

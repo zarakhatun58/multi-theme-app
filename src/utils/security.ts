@@ -23,14 +23,12 @@ export const validateTheme = (theme: string): boolean => {
 export const sanitizeUrl = (url: string): boolean => {
   try {
     const parsedUrl = new URL(url);
-    // Only allow https and http protocols
     return ['https:', 'http:'].includes(parsedUrl.protocol);
   } catch {
     return false;
   }
 };
 
-// Content Security Policy headers (for reference)
 export const CSP_DIRECTIVES = {
   'default-src': "'self'",
   'script-src': "'self' 'unsafe-inline'",

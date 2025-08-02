@@ -46,3 +46,7 @@ npx tailwindcss init -p
 
 # Create Theme Context (src/context/ThemeContext.tsx)
 # CSS classes for theme-specific layouts as needed based on your chosen styling approach (CSS Modules, Tailwind, or styled-components).
+
+# @redix-ui  for reusable component
+
+# use Localstorage in theme context
