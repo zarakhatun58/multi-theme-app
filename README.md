@@ -50,3 +50,10 @@ npx tailwindcss init -p
 # @redix-ui  for reusable component
 
 # use Localstorage in theme context
+
+# build 
+npm run build
+
+# Deploy link
+
+# https://theme-switcher-123.netlify.app/
